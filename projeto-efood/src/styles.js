@@ -1,10 +1,7 @@
 import { createGlobalStyle } from "styled-components"
 
 const cores = {
-    vermelho: '#E66767',
-    branco: '#fff',
-    fundo: '#FFF8F2',
-    rosaClaro: '#FFEBD9'
+    
 }
 
 export const EstiloGlobal = createGlobalStyle`
@@ -16,9 +13,16 @@ export const EstiloGlobal = createGlobalStyle`
     }
 
     body {
-        background-color: ${cores.fundo};
+        background-color: ${props => props.theme.fundo};
     }
 `
+
+export const theme = {
+    vermelho: '#E66767',
+    branco: '#fff',
+    fundo: '#FFF8F2',
+    rosaClaro: '#FFEBD9'
+}
 
 
 
